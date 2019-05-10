@@ -25,7 +25,7 @@ def send_webhook(config, payload):
             headers={config['api_key_header_name']: config['api_key']},
         )
     except Exception as e:
-        logger.warning('Unable to send webhook: ({1}) {2}'.format(
+        logger.warning('Unable to send webhook: ({0}) {1}'.format(
             e.__class__.__name__,
             e.message,
         ))
